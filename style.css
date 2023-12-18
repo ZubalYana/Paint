@@ -13,9 +13,12 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
+  position: relative;
 }
 .wrap .leftPanel {
+  position: absolute;
+  left: 0;
   width: 10%;
   height: 100%;
-  background-color: #B2A59B;
+  background-color: #000000;
 }/*# sourceMappingURL=style.css.map */
