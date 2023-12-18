@@ -27,30 +27,30 @@ body {
   background-color: #000000;
   padding: 12px;
 }
-.wrap .panel_logo {
+.wrap .panel .panel_logo {
   color: #fff;
   display: flex;
   align-items: flex-start;
   position: relative;
 }
-.wrap h2 {
+.wrap .panel h2 {
   font-size: 28px;
   font-weight: 700;
   position: absolute;
   top: 5px;
   left: 40px;
 }
-.wrap i {
+.wrap .panel i {
   font-size: 32px;
   margin-right: 10px;
 }
-.wrap .panel_colors {
+.wrap .panel .panel_colors {
   width: 100%;
   margin-top: 20px;
   flex-wrap: wrap;
   display: flex;
 }
-.wrap .panel_color {
+.wrap .panel .panel_color {
   margin-top: 10px;
   margin-right: 5px;
   width: 35px;
@@ -59,40 +59,40 @@ body {
   border: 3px solid #fff;
   cursor: pointer;
 }
-.wrap #red {
+.wrap .panel #red {
   background-color: red;
 }
-.wrap #pink {
+.wrap .panel #pink {
   background-color: pink;
 }
-.wrap #orange {
+.wrap .panel #orange {
   background-color: orange;
 }
-.wrap #yellow {
+.wrap .panel #yellow {
   background-color: yellow;
 }
-.wrap #lightgreen {
+.wrap .panel #lightgreen {
   background-color: lightgreen;
 }
-.wrap #green {
+.wrap .panel #green {
   background-color: green;
 }
-.wrap #lightblue {
+.wrap .panel #lightblue {
   background-color: lightskyblue;
 }
-.wrap #blue {
+.wrap .panel #blue {
   background-color: blue;
 }
-.wrap #purple {
+.wrap .panel #purple {
   background-color: purple;
 }
-.wrap #white {
+.wrap .panel #white {
   background-color: white;
 }
-.wrap #black {
+.wrap .panel #black {
   background-color: black;
 }
-.wrap #plus {
+.wrap .panel #plus {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,20 +100,13 @@ body {
   font-size: 24px;
   font-weight: 700;
 }
-.wrap .color-picker-container {
-  text-align: center;
-}
-.wrap .styled-color-input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  padding: 10px;
-  border: 2px solid #3498db;
-  border-radius: 5px;
-  outline: none;
-  transition: border-color 0.3s ease-in-out;
-}
-.wrap .styled-color-input:hover,
-.wrap .styled-color-input:focus {
-  border-color: #2980b9;
+.wrap .panel #colorpicker {
+  margin-top: 10px;
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  cursor: pointer;
+  display: none;
 }/*# sourceMappingURL=style.css.map */

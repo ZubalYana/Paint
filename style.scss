@@ -23,97 +23,91 @@ body {
         height: 100%;
         background-color: #000000;
         padding: 12px;
+        .panel_logo{
+            color: #fff;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+        }
+        h2{
+            font-size: 28px;
+            font-weight: 700;
+            position: absolute;
+            top: 5px;
+            left: 40px;
+        }
+        i{
+            font-size: 32px;
+            margin-right: 10px;
+        }
+        .panel_colors{
+            width: 100%;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        .panel_color{
+            margin-top: 10px;
+            margin-right: 5px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            cursor: pointer;
+        }
+        #red{
+            background-color: red;
+        }
+        #pink{
+            background-color: pink;
+        }
+        #orange{
+            background-color: orange;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #lightgreen{
+            background-color: lightgreen;
+        }
+        #green{
+            background-color: green;
+        }
+        #lightblue{
+            background-color: lightskyblue;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #purple{
+            background-color: purple;
+        }
+        #white{
+            background-color: white;
+        }
+        #black{
+            background-color: black;
+        }
+        #plus{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+    
+        }
+        #colorpicker{
+            margin-top: 10px;
+            margin-right: 5px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            cursor: pointer;
+            display: none;
+        }
     }
-    .panel_logo{
-        color: #fff;
-        display: flex;
-        align-items: flex-start;
-        position: relative;
-    }
-    h2{
-        font-size: 28px;
-        font-weight: 700;
-        position: absolute;
-        top: 5px;
-        left: 40px;
-    }
-    i{
-        font-size: 32px;
-        margin-right: 10px;
-    }
-    .panel_colors{
-        width: 100%;
-        margin-top: 20px;
-        flex-wrap: wrap;
-        display: flex;
-    }
-    .panel_color{
-        margin-top: 10px;
-        margin-right: 5px;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        border: 3px solid #fff;
-        cursor: pointer;
-    }
-    #red{
-        background-color: red;
-    }
-    #pink{
-        background-color: pink;
-    }
-    #orange{
-        background-color: orange;
-    }
-    #yellow{
-        background-color: yellow;
-    }
-    #lightgreen{
-        background-color: lightgreen;
-    }
-    #green{
-        background-color: green;
-    }
-    #lightblue{
-        background-color: lightskyblue;
-    }
-    #blue{
-        background-color: blue;
-    }
-    #purple{
-        background-color: purple;
-    }
-    #white{
-        background-color: white;
-    }
-    #black{
-        background-color: black;
-    }
-    #plus{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        font-size: 24px;
-        font-weight: 700;
 
-    }
-    .color-picker-container {
-        text-align: center;
-    }
-    
-    .styled-color-input {
-        appearance: none;
-        padding: 10px;
-        border: 2px solid #3498db;
-        border-radius: 5px;
-        outline: none;
-        transition: border-color 0.3s ease-in-out;
-    }
-    
-    .styled-color-input:hover,
-    .styled-color-input:focus {
-        border-color: #2980b9;
-    }
 
 }
