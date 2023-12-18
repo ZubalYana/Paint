@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Montserrat;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -15,10 +19,101 @@ body {
   display: flex;
   position: relative;
 }
-.wrap .leftPanel {
+.wrap .panel {
   position: absolute;
   left: 0;
-  width: 10%;
+  width: 13%;
   height: 100%;
   background-color: #000000;
+  padding: 12px;
+}
+.wrap .panel_logo {
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.wrap h2 {
+  font-size: 28px;
+  font-weight: 700;
+  position: absolute;
+  top: 5px;
+  left: 40px;
+}
+.wrap i {
+  font-size: 32px;
+  margin-right: 10px;
+}
+.wrap .panel_colors {
+  width: 100%;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  display: flex;
+}
+.wrap .panel_color {
+  margin-top: 10px;
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  cursor: pointer;
+}
+.wrap #red {
+  background-color: red;
+}
+.wrap #pink {
+  background-color: pink;
+}
+.wrap #orange {
+  background-color: orange;
+}
+.wrap #yellow {
+  background-color: yellow;
+}
+.wrap #lightgreen {
+  background-color: lightgreen;
+}
+.wrap #green {
+  background-color: green;
+}
+.wrap #lightblue {
+  background-color: lightskyblue;
+}
+.wrap #blue {
+  background-color: blue;
+}
+.wrap #purple {
+  background-color: purple;
+}
+.wrap #white {
+  background-color: white;
+}
+.wrap #black {
+  background-color: black;
+}
+.wrap #plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+.wrap .color-picker-container {
+  text-align: center;
+}
+.wrap .styled-color-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 10px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+.wrap .styled-color-input:hover,
+.wrap .styled-color-input:focus {
+  border-color: #2980b9;
 }/*# sourceMappingURL=style.css.map */

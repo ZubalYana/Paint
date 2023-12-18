@@ -5,13 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'/>
 </head>
 <body>
     <div class="wrap">
-        <div class="leftPanel"></div>
+        <div class="panel">
+            <div class="panel_logo">
+                <i class="fa-solid fa-hat-wizard"></i>
+                <h2>Paint</h2>
+            </div>
+            <div class="panel_colors">
+                <div class="panel_color" id="red"></div>
+                <div class="panel_color" id="pink"></div>
+                <div class="panel_color" id="orange"></div>
+                <div class="panel_color" id="yellow"></div>
+                <div class="panel_color" id="lightgreen"></div>
+                <div class="panel_color" id="green"></div>
+                <div class="panel_color" id="lightblue"></div>
+                <div class="panel_color" id="blue"></div>
+                <div class="panel_color" id="purple"></div>
+                <div class="panel_color" id="white"></div>
+                <div class="panel_color" id="black"></div>
+                <div class="panel_color" id="plus">+</div>
+
+            </div>
+            <input type="color" id="colorPicker" class="styled-color-input">
+        </div>
                 <canvas id="canvas"></canvas>
     </div>
-    
     <script src="./main.js"></script>
 </body>
 </html>

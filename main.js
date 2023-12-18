@@ -40,3 +40,9 @@ function save(){
 }
 function clear(){}
 function replay(){}
+
+let plus = document.getElementById('plus');
+let colorpicker = document.getElementById('colorpicker');
+plus.addEventListener('click', function(){
+    colorpicker.style.display = 'flex';
+})
