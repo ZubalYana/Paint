@@ -42,7 +42,20 @@ function clear(){}
 function replay(){}
 
 let plus = document.getElementById('plus');
-let colorpicker = document.getElementById('colorpicker');
+let colorpicker = document.getElementById('colorPicker');
+let colorpickerContidion = 'close'
 plus.addEventListener('click', function(){
-    colorpicker.style.display = 'flex';
+    if(colorpickerContidion == 'close'){
+        colorpicker.style.display = 'flex';
+        colorpickerContidion = 'open'
+    }else{
+        colorpicker.style.display = 'none';
+        colorpickerContidion = 'close'
+
+    }
 })
+
+
+function chooseColor(){
+    //here
+}

@@ -47,40 +47,40 @@ body {
             display: flex;
         }
         .panel_color{
-            margin-top: 10px;
+            margin-top: 5px;
             margin-right: 5px;
             width: 35px;
             height: 35px;
-            border-radius: 50%;
-            border: 3px solid #fff;
+            border: 1px solid #fff;
             cursor: pointer;
+            border-radius: 50%;
         }
         #red{
-            background-color: red;
+            background-color: #ff3f3f;
         }
         #pink{
-            background-color: pink;
+            background-color: #ffa0b0;
         }
         #orange{
-            background-color: orange;
+            background-color: #ffbb3e;
         }
         #yellow{
-            background-color: yellow;
+            background-color: #ffff72;
         }
         #lightgreen{
-            background-color: lightgreen;
+            background-color: #7aff7a;
         }
         #green{
-            background-color: green;
-        }
-        #lightblue{
-            background-color: lightskyblue;
+            background-color: #36c636;
         }
         #blue{
-            background-color: blue;
+            background-color: #5e5eff;
+        }
+        #indigo{
+            background-color: #6e1ca9;
         }
         #purple{
-            background-color: purple;
+            background-color: #c154f0;
         }
         #white{
             background-color: white;
@@ -97,16 +97,38 @@ body {
             font-weight: 700;
     
         }
-        #colorpicker{
-            margin-top: 10px;
+        .colorPicker {
+            appearance: none;
+            margin-top: 5px;
             margin-right: 5px;
             width: 35px;
             height: 35px;
+            border: none;
             border-radius: 50%;
-            border: 3px solid #fff;
             cursor: pointer;
+            outline: none;
+            border: 1px solid #fff;
             display: none;
-        }
+
+          }
+          
+          .colorPicker::-webkit-color-swatch {
+            border: none;
+            border-radius: 50%;
+          }
+          
+          .colorPicker::-webkit-color-swatch-wrapper {
+            padding: 0;
+          }
+          
+          .colorPicker::-moz-color-swatch {
+            border: none;
+            border-radius: 50%;
+          }
+          
+          .colorPicker::-moz-color-swatch-wrapper {
+            padding: 0;
+          }
     }
 
 
