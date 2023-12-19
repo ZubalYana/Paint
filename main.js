@@ -1,7 +1,7 @@
 let canv = document.getElementById('canvas');
 let ctx = canv.getContext('2d');
 let isMoseDown = false;
-let color = 'orange';
+let color = 'black';
 let lineWidth = 10;
 let cards = [];
 
@@ -47,6 +47,7 @@ let colorpickerContidion = 'close'
 plus.addEventListener('click', function(){
     if(colorpickerContidion == 'close'){
         colorpicker.style.display = 'flex';
+        plus.style.display = 'none';
         colorpickerContidion = 'open'
     }else{
         colorpicker.style.display = 'none';
@@ -56,6 +57,23 @@ plus.addEventListener('click', function(){
 })
 
 
-function chooseColor(){
-    //here
+let colorPicker = document.getElementById('colorPicker');
+
+colorPicker.addEventListener('input', function () {
+    let selectedColor = colorPicker.value;
+    chooseColor(selectedColor);
+});
+
+function chooseColor(selectedColor) {
+    color = selectedColor;
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
 }
+
+
+document.querySelectorAll('.panel_color').forEach(function (panelColor) {
+    panelColor.addEventListener('click', function () {
+        let selectedColor = window.getComputedStyle(panelColor).getPropertyValue('background-color');
+        chooseColor(selectedColor);
+    });
+});
