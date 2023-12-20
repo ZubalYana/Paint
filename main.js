@@ -35,10 +35,22 @@ canv.addEventListener('mousemove', function (e) {
     }
 })
 
+//save
 function save(){
     localStorage.setItem( 'cards', JSON.stringify(cards))
 }
-function clear(){}
+
+//clear
+let clearButton = document.getElementById('clear');
+clearButton.addEventListener('click', function () {
+    clearCanvas();
+});
+
+function clearCanvas() {
+    ctx.clearRect(0, 0, canv.width, canv.height);
+}
+
+
 function replay(){}
 
 let plus = document.getElementById('plus');
