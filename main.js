@@ -4,8 +4,6 @@ let isMoseDown = false;
 let color = 'black';
 let lineWidth = 10;
 let cards = [];
-
-
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
@@ -21,7 +19,6 @@ canv.addEventListener('mouseup', function () {
 ctx.lineWidth = lineWidth * 2;
 ctx.strokeStyle = color;
 ctx.fillStyle = color;
-
 canv.addEventListener('mousemove', function (e) {
     if (isMoseDown) {
         cards.push(e.clientX, e.clientY);
@@ -45,14 +42,13 @@ let clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', function () {
     clearCanvas();
 });
-
 function clearCanvas() {
     ctx.clearRect(0, 0, canv.width, canv.height);
 }
 
 
+//color changing
 function replay(){}
-
 let plus = document.getElementById('plus');
 let colorpicker = document.getElementById('colorPicker');
 let colorpickerContidion = 'close'
@@ -67,22 +63,16 @@ plus.addEventListener('click', function(){
 
     }
 })
-
-
 let colorPicker = document.getElementById('colorPicker');
-
 colorPicker.addEventListener('input', function () {
     let selectedColor = colorPicker.value;
     chooseColor(selectedColor);
 });
-
 function chooseColor(selectedColor) {
     color = selectedColor;
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
 }
-
-
 document.querySelectorAll('.panel_color').forEach(function (panelColor) {
     panelColor.addEventListener('click', function () {
         let selectedColor = window.getComputedStyle(panelColor).getPropertyValue('background-color');
@@ -90,7 +80,7 @@ document.querySelectorAll('.panel_color').forEach(function (panelColor) {
     });
 });
 
-
+//size changing
 let size = document.getElementById('size');
 size.addEventListener('input', function(){
     let selectedSize = size.value;
