@@ -165,12 +165,16 @@ body {
             width: 44px;
             cursor: pointer;
         }
-        .clear_save_container{
+        .panel_elements_container{
             margin-top: 15px;
             width: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
+        }
+        #gallery{
+            width: 44px;
+            cursor: pointer;
         }
 
           

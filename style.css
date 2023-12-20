@@ -162,10 +162,14 @@ body {
   width: 44px;
   cursor: pointer;
 }
-.wrap .panel .clear_save_container {
+.wrap .panel .panel_elements_container {
   margin-top: 15px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.wrap .panel #gallery {
+  width: 44px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
