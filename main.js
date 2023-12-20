@@ -33,7 +33,11 @@ canv.addEventListener('mousemove', function (e) {
 })
 
 //save
-function save(){
+let save = document.getElementById('save')
+save.addEventListener('click', function(){
+    saveFunction();
+})
+function saveFunction(){
     localStorage.setItem( 'cards', JSON.stringify(cards))
 }
 
