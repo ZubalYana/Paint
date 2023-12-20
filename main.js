@@ -77,3 +77,14 @@ document.querySelectorAll('.panel_color').forEach(function (panelColor) {
         chooseColor(selectedColor);
     });
 });
+
+
+let size = document.getElementById('size');
+size.addEventListener('input', function(){
+    let selectedSize = size.value;
+    chooseSize(selectedSize);
+})
+function chooseSize(selectedSize) {
+    lineWidth = selectedSize;
+    ctx.lineWidth = lineWidth;
+}

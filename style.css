@@ -24,14 +24,18 @@ body {
   left: 0;
   width: 13%;
   height: 100%;
-  background-color: #000000;
+  background-color: #5C8374;
   padding: 12px;
 }
 .wrap .panel .panel_logo {
-  color: #fff;
+  color: #000000;
   display: flex;
   align-items: flex-start;
   position: relative;
+}
+.wrap .panel .panel_logoPic {
+  width: 35px;
+  margin-right: 10px;
 }
 .wrap .panel h2 {
   font-size: 28px;
@@ -39,10 +43,6 @@ body {
   position: absolute;
   top: 5px;
   left: 40px;
-}
-.wrap .panel i {
-  font-size: 32px;
-  margin-right: 10px;
 }
 .wrap .panel .panel_colors {
   width: 100%;
@@ -55,7 +55,7 @@ body {
   margin-right: 5px;
   width: 35px;
   height: 35px;
-  border: 1px solid #fff;
+  border: 1px solid #000000;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -96,7 +96,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #000000;
   font-size: 24px;
   font-weight: 700;
 }
@@ -112,7 +112,7 @@ body {
   border-radius: 50%;
   cursor: pointer;
   outline: none;
-  border: 1px solid #fff;
+  border: 1px solid #000000;
   display: none;
 }
 .wrap .panel .colorPicker::-webkit-color-swatch {
@@ -133,11 +133,11 @@ body {
   overflow: hidden;
   -webkit-appearance: none;
   margin-top: 30px;
-  background-color: #000000;
+  background-color: #5C8374;
   border-radius: 40px;
   width: 90%;
   height: 16px;
-  border: #ffffff 2px solid;
+  border: #000000 2px solid;
 }
 .wrap .panel input[type=range]::-webkit-slider-runnable-track {
   height: 11px;
@@ -148,8 +148,8 @@ body {
   width: 12px;
   -webkit-appearance: none;
   height: 12px;
-  background: #ffffff;
-  box-shadow: -80px 0 0 80px #000000;
+  background: #000000;
+  box-shadow: -80px 0 0 80px #5C8374;
   border-radius: 50%;
   position: relative;
   top: 1px;
