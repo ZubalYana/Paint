@@ -162,6 +162,10 @@ body {
   width: 44px;
   cursor: pointer;
 }
+.wrap .panel #repeat {
+  width: 44px;
+  cursor: pointer;
+}
 .wrap .panel .panel_elements_container {
   margin-top: 15px;
   width: 100%;

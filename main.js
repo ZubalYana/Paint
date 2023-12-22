@@ -38,7 +38,7 @@ save.addEventListener('click', function(){
     saveFunction();
 })
 function saveFunction(){
-    localStorage.setItem( 'cards', JSON.stringify(cards))
+    let savedPic = localStorage.setItem( 'cards', JSON.stringify(cards))
 }
 
 //clear
