@@ -32,14 +32,9 @@ canv.addEventListener('mousemove', function (e) {
     }
 })
 
-//save
-let save = document.getElementById('save')
-save.addEventListener('click', function(){
-    saveFunction();
-})
-function saveFunction(){
-    let savedPic = localStorage.setItem( 'cards', JSON.stringify(cards))
-}
+// save
+    let savedDrawinng = JSON.parse(localStorage.getItem('cards'));
+
 
 //clear
 let clearButton = document.getElementById('clear');
