@@ -7,6 +7,23 @@ let cards = [];
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
+
+//closing the panel
+let xmark = document.getElementById('xmark'); 
+let panel = document.getElementsByClassName('panel')[0]; 
+let panelClosed = false;
+
+xmark.addEventListener('click', () => {
+    if(panelClosed == false){
+        panel.style.marginLeft = '-200px';
+        panelClosed = true;
+    }else{
+        panel.style.marginLeft = '0px';
+        panelClosed = false;
+    }
+});
+
+
 //paint 
 canv.addEventListener('mousedown', function () {
     isMoseDown = true;
@@ -115,3 +132,4 @@ function chooseSize(selectedSize) {
     lineWidth = selectedSize;
     ctx.lineWidth = lineWidth;
 }
+
