@@ -33,9 +33,14 @@ canv.addEventListener('mousemove', function (e) {
 })
 
 // save
-    let savedDrawinng = JSON.parse(localStorage.getItem('cards'));
+let savedDrawing = JSON.parse(localStorage.getItem('cards')) || [];
+let save = document.getElementById('save');
+save.addEventListener('click', () => {
+    localStorage.setItem('cards', JSON.stringify(cards));
+    alert('Drawing saved!');
+});
 
-
+    
 //clear
 let clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', function () {
