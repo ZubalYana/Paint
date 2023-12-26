@@ -22,7 +22,7 @@ body {
 .wrap .panel {
   position: absolute;
   left: 0;
-  width: 13%;
+  width: 200px;
   height: 100%;
   background-color: #e3e3e3;
   padding: 12px;
@@ -188,8 +188,10 @@ body {
   padding-bottom: 120px;
 }
 .wrap .panel .panel_picGallery {
-  width: 100%;
-  display: flex;
+  width: 176px;
+  min-height: 200px;
+  background-color: #36c636;
+  display: none;
   flex-direction: column;
   justify-content: center;
 }/*# sourceMappingURL=style.css.map */

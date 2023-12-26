@@ -7,7 +7,7 @@ let cards = [];
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
-// paint 
+//paint 
 canv.addEventListener('mousedown', function () {
     isMoseDown = true;
 });
@@ -32,7 +32,7 @@ canv.addEventListener('mousemove', function (e) {
     }
 })
 
-// save
+//save
 let savedDrawing = JSON.parse(localStorage.getItem('cards')) || [];
 let save = document.getElementById('save');
 save.addEventListener('click', () => {
@@ -40,6 +40,26 @@ save.addEventListener('click', () => {
     alert('Drawing saved!');
 });
 
+
+//show saved pictures
+// ...
+
+// show saved pictures
+// ...
+
+// show saved pictures
+let gallery = document.getElementById('gallery');
+let picturesGallery = document.getElementById('panel_picGallery');
+let picturesGalleryOpen = false;
+gallery.addEventListener('click', () => {
+    if(picturesGalleryOpen == false){
+        panel_picGallery.style.display = 'flex';
+        picturesGalleryOpen = true
+    }else{
+        panel_picGallery.style.display = 'none';
+        picturesGalleryOpen = false
+    }
+});
     
 //clear
 let clearButton = document.getElementById('clear');
@@ -83,6 +103,7 @@ document.querySelectorAll('.panel_color').forEach(function (panelColor) {
         chooseColor(selectedColor);
     });
 });
+
 
 //size changing
 let size = document.getElementById('size');
