@@ -57,27 +57,23 @@ save.addEventListener('click', () => {
     alert('Drawing saved!');
 });
 
-
-//show saved pictures
-// ...
-
-// show saved pictures
-// ...
-
 // show saved pictures
 let gallery = document.getElementById('gallery');
 let picturesGallery = document.getElementById('panel_picGallery');
-let picturesGalleryOpen = false;
 gallery.addEventListener('click', () => {
-    if(picturesGalleryOpen == false){
-        panel_picGallery.style.display = 'flex';
-        picturesGalleryOpen = true
-    }else{
-        panel_picGallery.style.display = 'none';
-        picturesGalleryOpen = false
-    }
+    showSavedDrawings();
 });
-    
+function showSavedDrawings() {
+    $('#panel_picGallery').empty(); // Clear existing content
+
+    savedDrawing.forEach((drawing) => {
+        // Assuming drawing is a simple string
+        const drawingElement = document.createElement('div');
+        drawingElement.textContent = drawing;
+        $('#panel_picGallery').append(drawingElement);
+    });
+}
+  
 //clear
 let clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', function () {
@@ -132,4 +128,3 @@ function chooseSize(selectedSize) {
     lineWidth = selectedSize;
     ctx.lineWidth = lineWidth;
 }
-

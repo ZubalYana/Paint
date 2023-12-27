@@ -195,9 +195,7 @@ body {
             width: 176px;
             min-height: 200px;
             background-color: #36c636;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
+            display: flex;
         }
         .closePanel{
             width: 40px;
