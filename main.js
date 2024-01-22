@@ -48,38 +48,51 @@ canv.addEventListener('mousemove', function (e) {
     }
 })
 
-//save
-let savedDrawing = JSON.parse(localStorage.getItem('cards')) || [];
-let save = document.getElementById('save');
-save.addEventListener('click', () => {
-    localStorage.setItem('cards', JSON.stringify(cards));
-    alert('Drawing saved!');
-});
+// Save
+// save.addEventListener('click', () => {
+//     localStorage.setItem('cards', JSON.stringify(cards));
+//     alert('Drawing saved!');
+// });
 
-// show saved pictures
-let gallery = document.getElementById('gallery');
-let picturesGallery = document.getElementById('panel_picGallery');
-gallery.addEventListener('click', () => {
-    showSavedDrawings()
-    picturesGalleryOpen = false;
+// Show saved pictures
+// let picturesGalleryOpen;
+// gallery.addEventListener('click', () => {
+//     showSavedDrawings();
+//     picturesGalleryOpen = !picturesGalleryOpen;
 
-    if (picturesGalleryOpen == false) {
-        panel_picGallery.style.display = 'flex';
-        picturesGalleryOpen = true;
-    } else {
-        panel_picGallery.style.display = 'none';
-        picturesGalleryOpen = false;
-    };
-});
+//     if (picturesGalleryOpen) {
+//         panel_picGallery.style.display = 'flex';
+//     } else {
+//         panel_picGallery.style.display = 'none';
+//     }
+// });
 
-function showSavedDrawings() {
-    $('#panel_picGallery').empty();
-    savedDrawing.forEach((drawing) => {
-        const drawingElement = document.createElement('div');
-        drawingElement.textContent = drawing;
-        $('#panel_picGallery').append(drawingElement);
-    });
-}
+// function showSavedDrawings() {
+//     let savedDrawing = JSON.parse(localStorage.getItem('cards')) || [];
+    
+//     // Clear previous drawings
+//     ctx.clearRect(0, 0, canv.width, canv.height);
+
+//     // Reconstruct and redraw the saved drawings
+//     ctx.lineWidth = lineWidth * 2;
+//     ctx.strokeStyle = color;
+//     ctx.fillStyle = color;
+
+//     for (let i = 0; i < savedDrawing.length; i++) {
+//         if (savedDrawing[i] === 'mouseup') {
+//             ctx.beginPath();
+//         } else {
+//             ctx.lineTo(savedDrawing[i], savedDrawing[i + 1]);
+//             ctx.stroke();
+//             ctx.beginPath();
+//             ctx.arc(savedDrawing[i], savedDrawing[i + 1], lineWidth, 0, Math.PI * 2);
+//             ctx.fill();
+//             ctx.beginPath();
+//             i++; // Skip the next coordinate since it's already used
+//         }
+//     }
+// }
+
   
 //clear
 let clearButton = document.getElementById('clear');

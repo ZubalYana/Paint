@@ -191,7 +191,6 @@ body {
 .wrap .panel .panel_picGallery {
   width: 176px;
   min-height: 200px;
-  background-color: #36c636;
   display: flex;
 }
 .wrap .panel .closePanel {
