@@ -8,7 +8,20 @@ canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
 let picGallery = document.getElementById('panel_picGallery');
+//closing the panel
+let xmark = document.getElementById('xmark'); 
+let panel = document.getElementsByClassName('panel')[0]; 
+let panelClosed = false;
 
+xmark.addEventListener('click', () => {
+    if(panelClosed == false){
+        panel.style.marginLeft = '-200px';
+        panelClosed = true;
+    }else{
+        panel.style.marginLeft = '0px';
+        panelClosed = false;
+    }
+});
 //saving drawing
 function saveDrawing() {
     //create an image
