@@ -1,97 +1,64 @@
 let canv = document.getElementById('canvas');
 let ctx = canv.getContext('2d');
-let isMoseDown = false;
+let isMouseDown = false;
 let color = 'black';
 let lineWidth = 10;
 let cards = [];
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
+// Add a reference to the pic gallery element
+let picGallery = document.getElementById('panel_picGallery');
 
-//closing the panel
-let xmark = document.getElementById('xmark'); 
-let panel = document.getElementsByClassName('panel')[0]; 
-let panelClosed = false;
-xmark.addEventListener('click', () => {
-    if(panelClosed == false){
-        panel.style.marginLeft = '-200px';
-        panelClosed = true;
-    }else{
-        panel.style.marginLeft = '0px';
-        panelClosed = false;
-    }
-});
+// Function to save drawings
+function saveDrawing() {
+    // Clone the canvas to create an image
+    let img = new Image();
+    img.src = canv.toDataURL();
 
+    // Create a new div element to hold the image
+    let imgContainer = document.createElement('div');
+    imgContainer.className = 'drawing-container';
+    imgContainer.appendChild(img);
 
-//paint 
+    // Append the image container to the pic gallery
+    picGallery.appendChild(imgContainer);
+}
+
+// Add event listeners for mouse actions
 canv.addEventListener('mousedown', function () {
-    isMoseDown = true;
+    isMouseDown = true;
 });
+
 canv.addEventListener('mouseup', function () {
-    isMoseDown = false;
+    isMouseDown = false;
     ctx.beginPath();
     cards.push('mouseup');
-})
+});
+
 ctx.lineWidth = lineWidth * 2;
 ctx.strokeStyle = color;
 ctx.fillStyle = color;
+
 canv.addEventListener('mousemove', function (e) {
-    if (isMoseDown) {
+    if (isMouseDown) {
         cards.push(e.clientX, e.clientY);
-        ctx.lineTo(e.clientX, e.clientY)
-        ctx.stroke()
-        ctx.beginPath()
-        ctx.arc(e.clientX, e.clientY, lineWidth, 0, Math.PI * 2)
+        ctx.lineTo(e.clientX, e.clientY);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(e.clientX, e.clientY, lineWidth, 0, Math.PI * 2);
         ctx.fill();
-        ctx.beginPath()
-        ctx.moveTo(e.clientX, e.clientY)
+        ctx.beginPath();
+        ctx.moveTo(e.clientX, e.clientY);
     }
-})
+});
 
-// Save
-// save.addEventListener('click', () => {
-//     localStorage.setItem('cards', JSON.stringify(cards));
-//     alert('Drawing saved!');
-// });
+// Save button click event listener
+let save = document.getElementById('save');
+save.addEventListener('click', function () {
+    saveDrawing();
+});
 
-// Show saved pictures
-// let picturesGalleryOpen;
-// gallery.addEventListener('click', () => {
-//     showSavedDrawings();
-//     picturesGalleryOpen = !picturesGalleryOpen;
-
-//     if (picturesGalleryOpen) {
-//         panel_picGallery.style.display = 'flex';
-//     } else {
-//         panel_picGallery.style.display = 'none';
-//     }
-// });
-
-// function showSavedDrawings() {
-//     let savedDrawing = JSON.parse(localStorage.getItem('cards')) || [];
-    
-//     // Clear previous drawings
-//     ctx.clearRect(0, 0, canv.width, canv.height);
-
-//     // Reconstruct and redraw the saved drawings
-//     ctx.lineWidth = lineWidth * 2;
-//     ctx.strokeStyle = color;
-//     ctx.fillStyle = color;
-
-//     for (let i = 0; i < savedDrawing.length; i++) {
-//         if (savedDrawing[i] === 'mouseup') {
-//             ctx.beginPath();
-//         } else {
-//             ctx.lineTo(savedDrawing[i], savedDrawing[i + 1]);
-//             ctx.stroke();
-//             ctx.beginPath();
-//             ctx.arc(savedDrawing[i], savedDrawing[i + 1], lineWidth, 0, Math.PI * 2);
-//             ctx.fill();
-//             ctx.beginPath();
-//             i++; // Skip the next coordinate since it's already used
-//         }
-//     }
-// }
 
   
 //clear
