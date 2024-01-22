@@ -15,6 +15,7 @@ body {
     height: 100vh;
     display: flex;
     position: relative;
+    overflow: hidden;
 
     .panel{
         position: absolute;
