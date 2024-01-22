@@ -190,9 +190,12 @@ body {
   padding-bottom: 120px;
 }
 .wrap .panel .panel_picGallery {
-  width: 176px;
-  min-height: 200px;
+  width: 100%;
+  max-height: 300px;
   display: flex;
+  flex-direction: column;
+  overflow: auto;
+  overflow-x: hidden;
 }
 .wrap .panel .closePanel {
   width: 40px;

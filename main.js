@@ -27,10 +27,11 @@ function saveDrawing() {
     //create an image
     let img = new Image();
     img.src = canv.toDataURL();
-    img.style.width = '176px'
-    img.style.height = '130px'
+    img.style.width = '160px'
+    img.style.height = '120px'
     img.style.marginTop = '10px'
-    img.style.backgroundColor = 'red'
+    img.style.backgroundColor = '#fff'
+    img.style.border = '3px #000 solid'
     picGallery.appendChild(img);
 }
 
