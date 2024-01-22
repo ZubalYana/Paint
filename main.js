@@ -7,22 +7,15 @@ let cards = [];
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
 
-// Add a reference to the pic gallery element
 let picGallery = document.getElementById('panel_picGallery');
 
-// Function to save drawings
+//saving drawing
 function saveDrawing() {
-    // Clone the canvas to create an image
+    //create an image
     let img = new Image();
     img.src = canv.toDataURL();
-
-    // Create a new div element to hold the image
-    let imgContainer = document.createElement('div');
-    imgContainer.className = 'drawing-container';
-    imgContainer.appendChild(img);
-
-    // Append the image container to the pic gallery
-    picGallery.appendChild(imgContainer);
+    img.style.width = '200px'
+    picGallery.appendChild(img);
 }
 
 // Add event listeners for mouse actions
