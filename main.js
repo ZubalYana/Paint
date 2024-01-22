@@ -12,7 +12,6 @@ canv.height = window.innerHeight;
 let xmark = document.getElementById('xmark'); 
 let panel = document.getElementsByClassName('panel')[0]; 
 let panelClosed = false;
-
 xmark.addEventListener('click', () => {
     if(panelClosed == false){
         panel.style.marginLeft = '-200px';
@@ -61,13 +60,21 @@ save.addEventListener('click', () => {
 let gallery = document.getElementById('gallery');
 let picturesGallery = document.getElementById('panel_picGallery');
 gallery.addEventListener('click', () => {
-    showSavedDrawings();
-});
-function showSavedDrawings() {
-    $('#panel_picGallery').empty(); // Clear existing content
+    showSavedDrawings()
+    picturesGalleryOpen = false;
 
+    if (picturesGalleryOpen == false) {
+        panel_picGallery.style.display = 'flex';
+        picturesGalleryOpen = true;
+    } else {
+        panel_picGallery.style.display = 'none';
+        picturesGalleryOpen = false;
+    };
+});
+
+function showSavedDrawings() {
+    $('#panel_picGallery').empty();
     savedDrawing.forEach((drawing) => {
-        // Assuming drawing is a simple string
         const drawingElement = document.createElement('div');
         drawingElement.textContent = drawing;
         $('#panel_picGallery').append(drawingElement);
