@@ -121,3 +121,16 @@ function chooseSize(selectedSize) {
     lineWidth = selectedSize;
     ctx.lineWidth = lineWidth;
 }
+
+//displaying pictures galery 
+let gallery = document.getElementById('gallery');
+let picGalleryOpen = false;
+gallery.addEventListener('click', ()=>{
+    if(picGalleryOpen == false){
+        picGallery.style.display = 'flex';
+        picGalleryOpen = true;
+    }else{
+        picGallery.style.display = 'none';
+        picGalleryOpen = false;
+    }
+});
