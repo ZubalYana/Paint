@@ -6,8 +6,8 @@ let lineWidth = 10;
 let cards = [];
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
-
 let picGallery = document.getElementById('panel_picGallery');
+
 //closing the panel
 let xmark = document.getElementById('xmark'); 
 let panel = document.getElementsByClassName('panel')[0]; 
@@ -22,9 +22,10 @@ xmark.addEventListener('click', () => {
         panelClosed = false;
     }
 });
+
+
 //saving drawing
 function saveDrawing() {
-    //create an image
     let img = new Image();
     img.src = canv.toDataURL();
     img.style.width = '160px'
@@ -35,21 +36,18 @@ function saveDrawing() {
     picGallery.appendChild(img);
 }
 
-// Add event listeners for mouse actions
+//paint
 canv.addEventListener('mousedown', function () {
     isMouseDown = true;
 });
-
 canv.addEventListener('mouseup', function () {
     isMouseDown = false;
     ctx.beginPath();
     cards.push('mouseup');
 });
-
 ctx.lineWidth = lineWidth * 2;
 ctx.strokeStyle = color;
 ctx.fillStyle = color;
-
 canv.addEventListener('mousemove', function (e) {
     if (isMouseDown) {
         cards.push(e.clientX, e.clientY);
@@ -70,7 +68,6 @@ save.addEventListener('click', function () {
 });
 
 
-  
 //clear
 let clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', function () {
@@ -79,7 +76,6 @@ clearButton.addEventListener('click', function () {
 function clearCanvas() {
     ctx.clearRect(0, 0, canv.width, canv.height);
 }
-
 
 //color changing
 function replay(){}
