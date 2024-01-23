@@ -23,7 +23,6 @@ xmark.addEventListener('click', () => {
     }
 });
 
-
 //saving drawing
 function saveDrawing() {
     let img = new Image();
@@ -67,7 +66,6 @@ save.addEventListener('click', function () {
     saveDrawing();
 });
 
-
 //clear
 let clearButton = document.getElementById('clear');
 clearButton.addEventListener('click', function () {
@@ -109,7 +107,6 @@ document.querySelectorAll('.panel_color').forEach(function (panelColor) {
         chooseColor(selectedColor);
     });
 });
-
 
 //size changing
 let size = document.getElementById('size');

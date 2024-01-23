@@ -197,6 +197,7 @@ body {
   flex-direction: column;
   overflow: auto;
   overflow-x: hidden;
+  align-items: center;
 }
 .wrap .panel .closePanel {
   width: 40px;
