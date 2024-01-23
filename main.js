@@ -134,3 +134,82 @@ gallery.addEventListener('click', ()=>{
         picGalleryOpen = false;
     }
 });
+
+//colors choosing animation
+red.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    red.style.border = '10px double #e3e3e3';
+});
+pink.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    pink.style.border = '10px double #e3e3e3';
+});
+orange.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    orange.style.border = '10px double #e3e3e3';
+});
+yellow.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    yellow.style.border = '10px double #e3e3e3';
+});
+lightgreen.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    lightgreen.style.border = '10px double #e3e3e3';
+});
+green.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    green.style.border = '10px double #e3e3e3';
+});
+blue.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    blue.style.border = '10px double #e3e3e3';
+});
+indigo.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    indigo.style.border = '10px double #e3e3e3';
+});
+purple.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    purple.style.border = '10px double #e3e3e3';
+});
+white.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    white.style.border = '10px double #e3e3e3';
+});
+black.addEventListener('click', () => {
+    document.querySelectorAll('.panel_color').forEach(color => {
+        color.style.border = '1px solid #000000';
+    });
+
+    black.style.border = '10px double #e3e3e3';
+});
