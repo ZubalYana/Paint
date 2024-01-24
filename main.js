@@ -211,38 +211,27 @@ black.addEventListener('click', () => {
     black.style.border = '10px double #e3e3e3';
 });
 
-//drawing repeat
-// let movements = [];
-// canv.addEventListener('mousemove', function (e) {
-//     if (isMouseDown) {
-//         movements.push({ x: e.clientX, y: e.clientY });
-//         ctx.lineTo(e.clientX, e.clientY);
-//         ctx.stroke();
-//         ctx.beginPath();
-//         ctx.arc(e.clientX, e.clientY, lineWidth, 0, Math.PI * 2);
-//         ctx.fill();
-//         ctx.beginPath();
-//         ctx.moveTo(e.clientX, e.clientY);
-//     }
-// });
-// function replayMovements() {
-//     ctx.clearRect(0, 0, canv.width, canv.height);
+// drawing repeat
+let movements = [];
+function replayMovements() {
+    ctx.clearRect(0, 0, canv.width, canv.height);
 
-//     for (let i = 0; i < movements.length; i++) {
-//         if (movements[i] === 'mouseup') {
-//             ctx.beginPath();
-//         } else {
-//             ctx.lineTo(movements[i].x, movements[i].y);
-//             ctx.stroke();
-//             ctx.beginPath();
-//             ctx.arc(movements[i].x, movements[i].y, lineWidth, 0, Math.PI * 2);
-//             ctx.fill();
-//             ctx.beginPath();
-//             ctx.moveTo(movements[i].x, movements[i].y);
-//         }
-//     }
-// }
-// let repeatButton = document.getElementById('repeat');
-// repeatButton.addEventListener('click', function () {
-//     replayMovements();
-// });
+    for (let i = 0; i < movements.length; i++) {
+        if (movements[i] === 'mouseup') {
+            ctx.beginPath();
+        } else {
+            ctx.lineTo(movements[i].x, movements[i].y);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(movements[i].x, movements[i].y, lineWidth, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.moveTo(movements[i].x, movements[i].y);
+        }
+    }
+}
+
+let repeatButton = document.getElementById('repeat');
+repeatButton.addEventListener('click', function () {
+    replayMovements();
+});
